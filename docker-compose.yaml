@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   nestapp:
-    build: ./
+    build: luisitotester/nest-demo:latests
     ports:
       - "3000:3000"
     env_file:
