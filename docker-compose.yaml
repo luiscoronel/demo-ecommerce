@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   nestapp:
-    build: luisitotester/nest-demo_latests:latest
+    image: luisitotester/nest-demo:latest
     ports:
       - "3000:3000"
     env_file:
@@ -11,7 +11,7 @@ services:
       - postgresdb
 
   postgresdb:
-    image: "postgres"
+    image: postgres
     volumes:
       - pgdata:/var/lib/postgresql/data
     env_file:
