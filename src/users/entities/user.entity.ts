@@ -35,9 +35,6 @@ export class User {
         @Column({length: 50})
         city: string 
 
-        @Column()
-        createAt: Date
-
         @Column({
                 default: false,
         })
