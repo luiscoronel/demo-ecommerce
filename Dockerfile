@@ -5,4 +5,4 @@ RUN npm install
 # RUN npm ci --only=production
 COPY . .
 EXPOSE 3000
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "start:prod"]
