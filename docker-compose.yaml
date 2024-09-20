@@ -7,8 +7,7 @@ services:
       - .env.development
     depends_on:
       - postgresdb
-    networks:
-      - networkNest
+
 
   postgresdb:
     image: postgres
@@ -16,12 +15,6 @@ services:
       - pgdata:/var/lib/postgresql/data
     env_file:
       - .env.development
-    networks:
-      - networkNest
 
 volumes:
   pgdata:
-
-networks:
-  networkNest:
-    driver: bridge
