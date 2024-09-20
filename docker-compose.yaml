@@ -2,11 +2,13 @@ services:
   nestapp:
     image: luisitotester/nest-demo:latest
     ports:
-      - "3000:3000"
+      - "3001:3000"
     env_file:
       - .env.development
     depends_on:
       - postgresdb
+    networks:
+      - networkNest
 
   postgresdb:
     image: postgres
@@ -14,6 +16,12 @@ services:
       - pgdata:/var/lib/postgresql/data
     env_file:
       - .env.development
+    networks:
+      - networkNest
 
 volumes:
   pgdata:
+
+networks:
+  networkNest:
+    driver: bridge
