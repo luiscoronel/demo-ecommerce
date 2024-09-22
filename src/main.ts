@@ -9,17 +9,10 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     logger: ['error', 'warn', 'log', 'verbose', 'debug'],
   });
-  const dataSource = app.get(DataSource);
-
-  dataSource.initialize().then(() => {
-    console.log('🚀 Conexión a la base de datos exitosa y tablas creadas');
-  }).catch((err) => {
-    console.error('❌ Error al conectar a la base de datos', err);
-  });
 
   const options = new DocumentBuilder()
-    .setTitle('Proyecto Integrador M4-Back de E-Commerce')
-    .setDescription('Aplicacion creada con NestJS')
+    .setTitle('Proyecto Modulo 4 Back de E-Commerce ')
+    .setDescription('Aplicacion creada con NestJS - TypeScritp - Postgresql - Swagger')
     .setVersion('1.0.0')
     .addBearerAuth()
     .build();
