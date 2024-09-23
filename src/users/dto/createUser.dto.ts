@@ -86,7 +86,7 @@ export class CreateUserDto {
 
     @ApiHideProperty()
     @IsBoolean()
-    isAdmin?: boolean;
+    isAdmin : boolean;
 }
 
 
