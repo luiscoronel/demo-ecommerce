@@ -36,7 +36,7 @@ export class User {
         city: string 
 
         @Column({
-                default: false,
+                default: true,
         })
         isAdmin: boolean
 

@@ -1,4 +1,4 @@
-import {IsNotEmpty, IsString, IsEmail, MinLength, MaxLength, IsStrongPassword, IsNumber, IsOptional, Validate, IsEmpty} from 'class-validator';
+import {IsNotEmpty, IsString, IsEmail, MinLength, MaxLength, IsStrongPassword, IsNumber, IsOptional, Validate, IsEmpty, IsBoolean} from 'class-validator';
 import { ApiHideProperty, ApiProperty, PickType } from '@nestjs/swagger' 
 import { MatchPassword } from '@app/decorators/matchPassword.decorator';
 
@@ -85,7 +85,7 @@ export class CreateUserDto {
     city: string;
 
     @ApiHideProperty()
-    @IsEmpty()
+    @IsBoolean()
     isAdmin?: boolean;
 }
 
