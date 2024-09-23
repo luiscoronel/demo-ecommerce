@@ -30,7 +30,6 @@ export class CreateProductDto {
     })
     @IsNotEmpty()
     @IsNumber()
-    @MinLength(10)
     price: number;
 
     @ApiProperty({
@@ -39,7 +38,6 @@ export class CreateProductDto {
     })
     @IsNotEmpty()
     @IsNumber()
-    @MinLength(1)
     stock: number;
 
     @ApiProperty({
